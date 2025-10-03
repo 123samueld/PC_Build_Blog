@@ -15,6 +15,10 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantare
 .main{margin-left:200px;padding:24px}
 .main img{max-width:100%;height:auto;display:block;border-radius:8px}
 .section{padding-top:16px;margin-top:-16px}
+figure { text-align: center; margin: 0 10px; }
+figcaption {font-weight: bold;}
+
+
 </style>
 </head>
 <body>
@@ -198,13 +202,14 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantare
 </p>
 <p id="text_">The mass of the main components were found to be:</p>
     <ul>
-       <li id="text_">0.0kg: Medullum (fragile internal components like Motherboard, GPU, RAM, Memory etc)</li> 
-       <li id="text_">0.0kg: Power Supply Unit</li>
-       <li id="text_">0.0kg: Skeletal pipework and 3D printed cartilage</li>
-       <li id="text_">0.0kg: Chain tendons and ligaments</li>
-       <li id="text_">0.0kg: The Alveolus Machina (air filters and primary inlet fan system)</li>
+       <li id="text_">2.15kg: Medullum (fragile internal components like Motherboard, GPU, RAM, Memory etc)</li> 
+       <li id="text_">1.7kg: Power Supply Unit</li>
+       <li id="text_">5.2kg: Venatus Ossifactrix (Skeletal pipework and 3D printed cartilage)</li>
+       <li id="text_">6.4kg: Chain tendons and ligaments</li>
+       <li id="text_">0.7kg: The Alveolus Machina (air filters and primary inlet fan system)</li>
        <li id="text_">0.0kg: Cranium (tough external elements)</li>
-       <li id="text_">0.0.kg: Total</li>
+       <li id="text_">2.1kg: Cabling</li>
+       <li id="text_">18.25kg: Total</li>
     </ul>
 <p id="text_">
     The key structural components were tested at 300% of their nominal load. 
@@ -215,10 +220,10 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantare
     The key components and the load tested were (ordered by max mass first to represent the orientation of tensile forces):
 </p>
     <ul>
-        <li id="text_">0.0kg: Wooden Ceiling Joists</li> 
-        <li id="text_">0.0kg: Mounting bolts (4 bolts, 0.0kg each)</li> 
-        <li id="text_">0.0kg: Mounting brackets (2 brackets, 0.0kg each) </li>
-        <li id="text_">0.0kg: Chain tendons and ligaments (4 chain sections, 0.0kg each)</li>
+        <li id="text_">60.0kg: Wooden Ceiling Joists</li> 
+        <li id="text_">60.0kg: Mounting bolts (4 bolts, 15.0kg each)</li> 
+        <li id="text_">30.0kg: Mounting brackets (only 150% of standard load because there was not enough test mass available) </li>
+        <li id="text_">33.9kg: Chain tendons and ligaments (4 chains, 8.5kg each)</li>
         <li id="text_">0.0kg: Skeletal pipework</li>
         <li id="text_">0.0kg: 3D printed PLA cartilage</li>
     </ul>
@@ -229,7 +234,50 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantare
     representing the strain the PC case will actually experience under normal conditions.
 </p>
 <h3 id="layout text_">CAD</h3>
-<p id="text_">Content coming soon.</p>
+<p id="text_">
+    FreeCAD was used to design the 3D printed components. These included brackets, braces and mounting points.
+    The structural componets were tested at 300% expected load to ensure they would properly support the PC components
+    under normal working load. The CAD work consumed a large % of the total design and build time but there's nothing
+    noteworthy to mention about it except the "happy accident" discovered when creating gothic tracery. 
+</p>
+<h4 id_text_">Happy Accident</h4>
+<p id="text_">
+    It was discovered that gothic tracery can double as a compliant mechanism if designed correctly. 
+    A compliant mechanism is a device that allows for some elasticity under load without breaking. 
+    This design principle can be used to create extremely compact, 
+    highly resiliant components that can achive a very high precision range of movement,
+    like a <a href="https://www.youtube.com/watch?v=C7sPRYPM_yQ" target="_blank"> printed microscope control stage</a>. 
+    It was discovered that gothic filigree can be designed in such a way 
+    to provide compliant-like behavior while also being very beautiful and adding strength and rigidity to the structure. 
+    This discovery aligns very well with my attempt to ensure as many components as possible
+    serve both form and function. 
+</p>
+<div style="display: flex; justify-content: center; gap: 10px;">
+
+    <figure style="text-align: center;">
+        <img 
+            src="./resources/imgs/compliant_mechanism.png" 
+            width="120px" 
+            height="120px" 
+            style="position: relative; left: 25%;"
+        >
+        <figcaption>Conventional compliant mechanism, <br> a radial spring in this case.</figcaption>
+    </figure>
+
+    <figure style="text-align: center;">
+        <img 
+            src="./resources/imgs/compliant_radial_filigree.png" 
+            width="120px" 
+            height="120px" 
+            style="position: relative; left: 25%;"
+        >
+        <figcaption>Tracery designed to create<br> compliance in the radial axis.</figcaption>
+    </figure>
+    
+</div>
+
+
+
 </section>
 <section id="assembly" class="section" aria-labelledby="assembly-heading">
 <h2 id="assembly-heading text_">Assembly</h2>
