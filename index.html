@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog about building a Grimdark PC.</title>
+<title>Grimdark PC.</title>
 <style>
 body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial;line-height:1.6;color:#111}
 .header{padding:16px 16px 16px 216px;background:#f7f7f8;border-bottom:1px solid #e5e7eb}
@@ -13,10 +13,11 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantare
 .sidebar a{display:block;color:#e2e8f0;text-decoration:none;padding:6px 4px;border-radius:6px;font-size:14px}
 .sidebar a:hover{background:#1e293b}
 .main{margin-left:200px;padding:24px}
-.main img{max-width:100%;height:auto;display:block;border-radius:8px}
+.main img{max-width:100%;height:auto;display:block;margin:0 auto;border-radius:8px;border:2px solid transparent;background:linear-gradient(#111,#111) padding-box,linear-gradient(135deg,#d9d9d9,#8a8a8a 20%,#f5f5f5 40%,#6f6f6f 60%,#eaeaea 80%,#a0a0a0) border-box;box-shadow:0 2px 6px rgba(0,0,0,0.25),0 8px 24px rgba(0,0,0,0.25);transition:transform 0.2s ease,box-shadow 0.2s ease;cursor:zoom-in}
+.main img:hover{transform:scale(1.05);box-shadow:0 4px 12px rgba(0,0,0,0.4),0 16px 48px rgba(0,0,0,0.4)}
 .section{padding-top:16px;margin-top:-16px}
-figure { text-align: center; margin: 0 10px; }
-figcaption {font-weight: bold;}
+figure { text-align: center; margin: 0 auto; display: inline-block; }
+figcaption {font-weight: bold; text-align: center;}
 
 
 </style>
@@ -29,101 +30,118 @@ figcaption {font-weight: bold;}
 <a href="#prep-work" id="text_">Prep Work</a> 
 <a href="#rough-design" id="text_">Rough Technical Design</a>
 <a href="#CAD-testing" id="text_">CAD and Testing</a> 
-<a href="#assembly" id="text_">Assembly</a>
+<a href="#assembly" id="text_">Manufacturing & Assembly</a>
 <a href="#cooling" id="text_">Cooling, Thermals &amp; EMI</a>
-<a href="#painting" id="text_">Painting &amp; Finish</a>
+<a href="#painting" id="text_">Materials Finish</a>
+<a href="#network" id="text_">Optronic LAN</a>
+<a href="#video" id="text_">Video</a>
 </nav>
 <header class="header">
-<h1 id="text_">Blog about building a Grimdark PC.</h1>
+<h1 id="text_">Grimdark PC Blog</h1>
 </header>
 <main class="main" id="top">
 <section id="inspiration" class="section" aria-labelledby="intro-heading">
 <h2 id="intro-heading text_">Inspiration</h2>
 <p id="text_">
     I've been hugely impressed by the 'Grimdark' style, which I define as a fusion of 
-    Medieval Central European, pseudo Christian, sci-fi, bio-cybernetic, feudal, and nationalist. 
-    It's imposing, grand, ornate, and richly fascinating. The aesthetic creates a dark and foreboading atmosphere, 
+    Medieval central European, pseudo Christian, sci-fi, bio-cybernetic, feudal, and nationalist. 
+    It's imposing, grand, ornate, and richly fascinating. The aesthetic creates a dark and foreboding atmosphere, 
     blending historical styling with futuristic and biological accents. 
     Think <a href="https://hrgiger.com/" target="_blank">HR Giger</a> but non-sexual and a ton more skulls.
 </p>
 
 <div style="display: flex; justify-content: center; gap: 10px;">
-
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="1">
         <img 
             src="./resources/imgs/giger.jpg" 
-            width="360px" 
-            height="360px" 
+            width="480px" 
+            height="480px" 
 
         >
         <figcaption>Giger</figcaption>
-    </figure>
-    
+    </figure>    
 </div>
 
 <p id="text_">
     During my initial exploration of this theme, I sketched various 'hanging' ornaments in the pseudo-gothic style, inspired by architecture and ornaments from across the City of Edinburgh. 
     Only 'pseudo' gothic because these examples are an imitation of the gothic style 
-    which pay no heed to the engineering priciples, yet still carry similar visual character of the original movement.
+    which pay no heed to the engineering principles, yet still carry similar visual character of the original movement.
 </p>
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="2">
         <img 
-            src="./resources/imgs/compliant_mechanism.png" 
-            width="120px" 
-            height="120px" 
+            src="./resources/imgs/sketx_bOrd_001/001.png" 
+            width="240px" 
+            height="360px" 
             style="position: relative; left: 0%;"
         >
-        <figcaption>Sketch 1</figcaption>
+        <figcaption>Scotts Monument</figcaption>
     </figure>
 
-        <figure style="text-align: center;">
+    <figure style="text-align: center;" id="3">
         <img 
-            src="./resources/imgs/compliant_mechanism.png" 
-            width="120px" 
-            height="120px" 
+            src="./resources/imgs/sketx_bOrd_001/002.png" 
+            width="240px" 
+            height="360px" 
         >
-        <figcaption>Sketch 2</figcaption>
+        <figcaption>Witchery Hotel Chandelier</figcaption>
     </figure>
 
-        <figure style="text-align: center;">
+    <figure style="text-align: center;" id="4">
         <img 
-            src="./resources/imgs/compliant_mechanism.png" 
-            width="120px" 
-            height="120px" 
+            src="./resources/imgs/sketx_bOrd_001/003.png" 
+
+            width="240px" 
+            height="360px" 
         >
-        <figcaption>Sketch 3</figcaption>
+        <figcaption>St Giles Cathedral Chandelier</figcaption>
     </figure>
 
-        <figure style="text-align: center;">
+    <figure style="text-align: center;" id="5">
         <img 
-            src="./resources/imgs/compliant_mechanism.png" 
-            width="120px" 
-            height="120px" 
+            src="./resources/imgs/sketx_bOrd_001/004.png" 
+
+            width="240px" 
+            height="360px" 
         >
-        <figcaption>Sketch 4</figcaption>
+        <figcaption>St Mary's Cathedral, Censer and Detail</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="6">
+        <img 
+            src="./resources/imgs/sketx_bOrd_001/005.png" 
+
+            width="240px" 
+            height="360px" 
+        >
+        <figcaption>Old St Paul's shelf</figcaption>
     </figure>
     
 </div>
 <p id="text_">
-    The defining feature of this style is its reliance on compressive forces, which were used to build the majestic cathedrals of medieval Europe. These structures followed distinctly different design principles from the castles of the time. Castles, designed for military defense and counter-seige craft, were built to be incredibly robust. With walls several meters thick, castle architecture is very stout which results in dark interiors. Their sheer power and strength made them the superweapons of their era, maximising for the intimidation factor not beauty nor elegance. 
+    The defining feature of this style is its reliance on compressive forces, which were used to build the majestic cathedrals of medieval Europe. 
+    These structures followed distinctly different design principles from the castles of the time. 
+    Castles, designed for military defense and counter-siege craft, were built to be incredibly robust. 
+    With walls several meters thick, castle architecture is very stout which results in dark interiors. 
+    Their sheer power and strength made them the superweapons of their era, maximising for the intimidation factor not beauty nor elegance. 
 </p>
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="7">
         <img 
             src="./resources/imgs/castle_wall_thickness.jpg" 
-            width="240px" 
-            height="240px" >
+            width="480px" 
+            height="480px" 
+            >
         <figcaption>Thick Castle Walls</figcaption>
     </figure>
     
 </div>
 <p id="text_">
     The Opus Francigenum style, or 'French Work' (Gothic design) emerged as a dominant form of architecture in the
-    12th starting in Frankish lands then rapidly spread across Christendom by highly saught after artisans: 
-    master builders, iron workers, stone masons, carpenters, glass makers, renderers and a veritible army of support workers. 
+    12th starting in Frankish lands then rapidly spread across Christendom by highly sought after artisans: 
+    master builders, ironworkers, stonemasons, carpenters, glassmakers, renderers and a veritable army of support workers. 
     Over ~300 years and much trial and error, architects perfected the creative use of compressive forces to create 
     towering, airy structures. These buildings stood as monolithic feats of engineering, incorporating geometry that 
     still holds up nearly a millennium later. 
@@ -131,17 +149,19 @@ figcaption {font-weight: bold;}
 </p>
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="8">
         <img 
-            src="./resources/imgs/tall_spires.jpg" 
+            src="./resources/imgs/towering_spires.jpg" 
+            alt="Beautiful and elegant St Patricks vs ugly bastion of corporatism, NYC".
             width="240px" 
-            height="240px" >
-        <figcaption>Elegant form and function</figcaption>
+            height="360px" >
+        <figcaption>Beautiful and Elegant <br>
+             Form and Function</figcaption>
     </figure>
     
 </div>
 <p id="text_">
-    This style introduced iconic geometric elements such as the lancet arch, reinforced buttresses, 
+    This style introduced iconic geometric elements such as the lancet arch, vaulted ceilings, reinforced buttresses, 
     triangular peaks with a ~3.5:1 ratio, and heavy pinnacle stones. 
     Although these features are beautiful they're not ornamental—they are physical manifestations of the underlying 
     physical principles that have allowed these majestic edifices to remain standing as ancient heirlooms 
@@ -149,43 +169,80 @@ figcaption {font-weight: bold;}
 </p>
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="9">
         <img 
-            src="./resources/imgs/gothic_engineering.jpg" 
-            width="240px" 
-            height="240px" >
-        <figcaption>Gothic Engineering Geometry</figcaption>
+            src="./resources/imgs/lancet_arch.jpg" 
+            alt="Lancet arch colonnade of the nave of Reims Cathedral"
+            style="width: 240px; height: 240px; object-fit: cover;"
+            >
+        <figcaption>Lancet Arch</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="10">
+        <img 
+            src="./resources/imgs/vaulted_ceilings.jpg" 
+            alt="Ornate Vaulted Ceilings of Segovia Cathedral, Spain"
+            style="width: 240px; height: 240px; object-fit: cover;"
+            >
+        <figcaption>Vaulted Ceilings</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="11">
+        <img 
+            src="./resources/imgs/stone_buttresses.jpg" 
+            alt="The Powerful Buttresses of Chartres Cathedral, Paris"
+            style="width: 240px; height: 240px; object-fit: cover;"
+            >
+        <figcaption>Buttresses</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="12">
+        <img 
+            src="./resources/imgs/scotts_spire.jpg" 
+            alt="The elegant spire of The Scott Monument in Edinburgh, Scotland"
+            style="width: 240px; height: 240px; object-fit: cover;"
+            >
+        <figcaption>Elegant Spires</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="13">
+        <img 
+            src="./resources/imgs/pinnacles.jpg" 
+            alt="Gothic pinnacle architectural elements"
+            style="width: 240px; height: 240px; object-fit: cover;"
+            >
+        <figcaption>Pinnacles</figcaption>
     </figure>
     
 </div>
 <p id="text_">
-    While Gothic architecture relies heavily on compression, objects that 'hang'—like chandelliers, candle holders, 
-    insence sensors, etc —depend on tension, the exact opposite of compression. 
+    While Gothic architecture relies heavily on compression, objects that 'hang'—like chandeliers, candleholders, 
+    incense censer, etc —depend on tension, the exact opposite of compression. 
     This contrast in forces reveals my dilemma in designing a "hanging Gothic PC case".
 </p>
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="14">
         <img 
             src="./resources/imgs/compressive_direction.jpg" 
-            width="360px" 
-            height="360px" >
-        <figcaption>Compressive Forces</figcaption>
+            width="480px" 
+            height="480px" >
+        <figcaption>Compressive Load</figcaption>
     </figure>
 
-        <figure style="text-align: center;">
+        <figure style="text-align: center;" id="15">
         <img 
             src="./resources/imgs/gothic_hanging_chandelier.jpg" 
             width="240px" 
             height="240px" >
-        <figcaption>Hanging Gothic</figcaption>
+        <figcaption>Tensile Load</figcaption>
     </figure>
     
 </div>
 <p id="text_">
     Hanging chains were used by master designers, engineers and architects as an early form of 
-    "<a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fdetailed-analysis-bridge-structure-using-finite-element-analysis-fea-mesh-stress-distribution_1105246-1054.jpg&f=1&nofb=1&ipt=10022ae60024700c6f85b38bbebfb960661410483d562d02507cfe85d8116483" target="_blank">
-    finite element analysis</a>" simulation. 
+    <a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fdetailed-analysis-bridge-structure-using-finite-element-analysis-fea-mesh-stress-distribution_1105246-1054.jpg&f=1&nofb=1&ipt=10022ae60024700c6f85b38bbebfb960661410483d562d02507cfe85d8116483" target="_blank">
+    finite element analysis</a> simulation. 
     Once a design solution had been found the model would be inverted then built, 
     so a hanging gothic design is quite literally upside down. Learn more about this interesting process 
     <a href="https://www.youtube.com/watch?v=iRv_syz2DAc" target="_blank">here</a>.
@@ -193,12 +250,13 @@ figcaption {font-weight: bold;}
 
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="16">
         <img 
             src="./resources/imgs/hanging_chain_design.jpg" 
-            width="240px" 
-            height="240px" >
-        <figcaption>Hanging Chain Design</figcaption>
+            width="480px" 
+            height="480px" 
+             >
+        <figcaption>Sagrada Familia: Hanging Chain Model</figcaption>
     </figure>
     
 </div>
@@ -208,30 +266,34 @@ figcaption {font-weight: bold;}
     which is suspended by strong chains from the ceiling. From this foundation every other component 
     is placed on top and so under the conventional compressive forces found in gothic design. 
     Anything designed and built from scratch is very complex and resource intensive. 
-    So to simplify the process a little this "hanging foundation" design is able to constrain the design choices 
+    So to simplify the process a little this "suspended foundation" design is able to constrain the design choices 
     to mostly compressive forces after the suspended foundation is built. For me, 
     the extra effort this design choice entails is worth it. 
-    This choice ensures the PC and it's case will not only appear gothic design in form, 
-    but also be gothic in it's structural function. Form and function interwoven in harmonious synergy.
+    This choice ensures the PC and its case will not only appear gothic design in form, 
+    but also be gothic in its structural function. Form and function interwoven in harmonious synergy.
 </p>
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="17">
         <img 
             src="./resources/imgs/hanging_foundation.jpg" 
             width="240px" 
             height="240px" >
-        <figcaption>Suspended Foundation</figcaption>
+        <figcaption>Suspended Foundation Design</figcaption>
     </figure>
     
 </div>
 <p id="text_">
-    This attention to synergetic detail is not only applied to the main, most visable, external components 
-    but is also applied to internal components. Connective braces, brakets and clasps likewise serve well in both form and function.
-    The beautiful latticework of these connective components serves to make the internal strucutre not only more ridged due to cross bracing, 
-    but also more elastic allowing for greater shock absorbing properties if the PC case happens to get bumped or dropped. 
-    Because the lattice work is so fine it only contributes a small amount of additional mass while adding huge gains in form and function. There are so many components and features that I've used 
-    biological concepts to create sub-catagories to organise the components into intuitive catagories, these are:
+    This attention to synergetic detail is not only applied to the main, most visible, 
+    external components but is also applied to internal components. 
+    Connective braces, brackets and clasps likewise serve well in both form and function. 
+    The beautiful latticework of these connective components serves to make the internal structure 
+    not only more ridged due to cross bracing, but also more elastic allowing for 
+    greater shock absorbing properties if the PC case happens to get bumped or dropped. 
+    Because the lattice work is so fine it only contributes a small amount of additional mass 
+    while adding huge gains in form and function. 
+    here are so many components and features that I've used biological concepts to create subcategories to 
+    organise the components into intuitive categories, these are:
 </p>
 <ul style="width: 50%; list-style-position: outside; padding-left: 1.5em;">
     <li>
@@ -291,7 +353,7 @@ figcaption {font-weight: bold;}
         true HEPA cylindrical particulate filter and activated charcoal screen. 
         Custom ducting, mounting and airtight sealing across the whole case 
         will be used to create a linear airflow path from bottom to top.
-        Internal thermal and flow regulation could be added with later upgrades.
+        Internal thermal and flow regulation could be added with later upgrades. More about this later.
     </li>
 </ul>
 </section>
@@ -303,17 +365,17 @@ figcaption {font-weight: bold;}
     The heavy metal components and some of the 2nd hand components needed cleaning and even some needed
     deburring before they could be allowed to come in contact with clean, sealed computer electronics. 
     Some of the heavy metal components had to be machined and surface preparation is everything.
-    Sharp edges and manufacturing artifacts were thoroghly deburred and sanded, then isopropyl alcohol wipes 
+    Sharp edges and manufacturing artifacts were thoroughly deburred and sanded, then isopropyl alcohol wipes 
     and acetone solvent were used to clean, degrease and remove many particulates from the heavy metal components.
-    The cleaning process was labourious but the steps were repeated many times (~3-7) until no further dirt was obseverd on a clean, 
-    white alcohol wipe. 
+    The cleaning process was laborious but the steps were repeated many times (~3-7) 
+    until no further dirt was observed on a clean, white alcohol wipe.
 </p>
 <p id="text_">
     The workspace has a severe dust problem, so all extra fabric was removed from the 
     room and the carpet floor and horizontal surfaces were wet cleaned multiple times across the duration of the project. 
     This is far from a clean room setup but is the highest cleanliness possible with the resources available. 
-    When handling electronics, nitrile gloves were used and the work station was set up on an anti-static mat. In addition 
-    I was plugged into the anti-static circuit to further reduce any chance of a static overload in the electrical system. 
+    When handling electronics, nitrile gloves were used and the work station was set up on a grounded anti-static mat. In addition 
+    I was plugged into the grounded anti-static circuit to further reduce any chance my body might cause a static overload in the sensitive, exposed electrical components. 
     All components were left sealed in packaging until the very last moment before installation, or minimal 
     removal during the design and testing phases. 
     Once the materials and workspace were prepared, the design and build phases commenced. 
@@ -323,40 +385,72 @@ figcaption {font-weight: bold;}
 <h2 id="rough-design-heading text_">Rough Technical Design</h2>
 <h3 id="layout text_">Layout</h3>
 <p id="text_">
-    As previously mentioned, because the project is so complex, the components are placed in catagories inspired by anatomy. 
+    As previously mentioned, because the project is so complex, the components are placed in categories inspired by anatomy. 
     Bones, Cartilage, Ligaments, Tendons etc. The underlying iron pipe structure is the toughest component and 
     is catagorised under "Venatus Ossificatrix", or "Venerable Matrix of Bones" in low gothic. 
     These are given added rigidity in their off-axes by ornate, 3D printed "Cartilagus" aka "cartilage". The 4 chains that hold up the whole 
-    structure are "Tendo Ferrum" or "iron tendons". This catagorisation method allowed for great organisation across many complex systems 
-    but without getting too distracted by the fun, creative process of coming up with new concepts and catagories, 
+    structure are "Tendo Ferrum" or "iron tendons". This categorisation method allowed for great organisation across many complex systems 
+    but without getting too distracted by the fun, creative process of coming up with new concepts and categories, 
     just drawing on God's creation for inspiration instead.
 </p>
 <h3 id="sketches text_">Sketches</h3>
 <p id="text_">
     To check the viability of a few ideas quickly, rough technical sketches were drawn. 
-    They are 8:1 scale with moderate attention to accuracy, 
+    They are 1:8 scale with moderate attention to accuracy, 
     to produce drawings that quite closely represent a full scale design and build phases. 
     This allowed for rapid, low cost, low risk testing of ideas. 
     Design concepts were tested against these simple paper models to debug design flaws 
     before they crept up in the full scale, expensive build. 
     This was a fast and cheap way to iterate though a few ideas until a design was found.
     This method is not a substitute for proper care and attention to detail during design, manufacturing and assembly,
-    but is just a handy little tool in the engineers toolbox.
+    but is just a handy little tool in the engineers' toolbox.
 
 </p>
+
+<div style="display: flex; justify-content: center; gap: 10px;">
+
+    <figure style="text-align: center;" id="18">
+        <img 
+            src="./resources/imgs/sketx_bOrd_001/006.jpg" 
+            width="480px" 
+            height="480px" 
+            alt="Dimensions of individual interior components were explored to ensure fit and airflow."
+            style="position: relative; left: 0%;"
+        >
+        <figcaption>Fitted Interior Components</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="19">
+        <img 
+            src="./resources/imgs/sketx_bOrd_001/007.jpg" 
+            alt="Concept for exterior form, handling for structural components like frame and chain."
+            width="480px" 
+            height="480px" 
+        >
+        <figcaption>Exterior Concept</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="20">
+        <img 
+            src="./resources/imgs/sketx_bOrd_001/008.jpg" 
+            alt="Dimensions of frame were explored to determine mounting brackets for electronics."
+            width="480px" 
+            height="480px" 
+        >
+        <figcaption>Measurments of Frame</figcaption>
+    </figure>    
+</div>
 </section>
 <section id="CAD-testing" class="section" aria-labelledby="CAD-testing">
 <h2 id="CAD-testing-heading text_">Testing and CAD</h2>
 <h3 id="testing text_">Mass Testing</h3>
-<p id="text_">
-    Because the completed PC and case was projected to weigh +10kg, testing the key structural components was required.
-    If any one key structural component were to fail, 
-    it would be an expensive accident with little chance of recovery. 
-    The mass of each of the main components was found and key components were tested at 
-    ~300% their nominal load or to breaking, whichever would come first. 
-    The testing and large saftey margin will allow for full peace of mind that the PC case will be mounted very securley. 
-    Once the stress testing was complete the structural integrety of the device drew no further attention and energies
-    could fully move on to other matters without fear.
+<p id="text_"> 
+    Because the completed PC and case was projected to weigh +10kg (later discovered to be 18.25kg), testing the key structural components was required. 
+    If anyone key structural component were to fail, it would be an expensive accident with little chance of recovery. 
+    The mass of each of the main components was found and key components were tested at ~300% their nominal load or to breaking, 
+    whichever would come first. The testing and large safety margin will allow for full peace of mind that the PC case will be 
+    mounted very securely. Once the stress testing was complete the structural integrity of the device drew no further attention and 
+    energies could fully move on to other matters without fear.
 </p>
 <p id="text_">The mass of the main components were found to be:</p>
     <ul>
@@ -374,7 +468,7 @@ figcaption {font-weight: bold;}
     Exercise weights were used as a dummy test mass. 
     Before testing, the components were inspected to observe their pre-test condition.
     The key components were placed under load and left to sit for 24h under the excess strain. 
-    After testing, the components were were inspected for signs of deformation. 
+    After testing, the components were inspected for signs of deformation. 
     The key components and the load tested were (ordered by max mass first to represent the orientation of tensile forces):
 </p>
     <ul>
@@ -393,32 +487,46 @@ figcaption {font-weight: bold;}
 </p>
 <h3 id="layout text_">CAD</h3>
 <p id="text_">
-    FreeCAD was used to design the 3D printed components. These included brackets, braces and mounting points.
-    The structural componets were tested at 300% expected load to ensure they would properly support the PC components
-    under normal working load. 
+    FreeCAD was used to design the 3D printed components. These included brackets, braces and mounting points. 
+    The structural components were tested at 300% expected load to ensure they would properly support the PC components 
+    under normal working load.
 </p>
 <p id="text_">
-    While prototyping 3D printed components it was discovered that inserting heated brass inserts by hand was creating 
-    many alignment issues. So over about 1 day and 3 prototypes, a mount was created to clasp the heated brass insert tool
-    in my drill press. The drill press makes for a very sturdy platform and good control over the downward force 
-    used to press in the heated brass insert. Brass inserts are now pressed into 3D printed componets with 
-    good accuracy and consistency thanks to this new, drill press/heated insert combi-tool. As a fun aside, while developing
-    this multi-tool, a technique to add raised text to CAD models was discovered. This will open the ability to add
-    cool, raised text to 3D models in the future. 
+
+    While prototyping 3D printed components it was discovered that inserting heated brass inserts by hand was creating many alignment issues. 
+    So over about 1 day and 3 prototypes, a mount was created to clasp the heated brass insert tool in my drill press. 
+    The drill press makes for a very sturdy platform and good control over the downward force used to press in the heated brass insert. 
+    Brass inserts are now pressed into 3D printed components with good accuracy and consistency thanks to this new, 
+    drill press/heated insert comb-tool. As a fun aside, while developing this multi-tool, 
+    a technique to add raised text to CAD models was discovered. 
+    This will open the ability to add cool, raised text to 3D models in the future.
 </p>
 <div style="display: flex; justify-content: center; gap: 100px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="21">
         <img 
-            src="./resources/imgs/compliant_mechanism.png" 
+            src="./resources/imgs/press_001.jpg" 
+            alt="The insert tool attachment clamps around an 8mm drill bit mounted in the drill press chuck."
             width="240px" 
             height="240px" 
-            style="position: relative; left: 25%;"
+            style="position: relative; left: 0%;"
         >
-        <figcaption>Conventional compliant mechanism, <br> a radial spring in this case.</figcaption>
+        <figcaption>Drill press with insert tool attachment.</figcaption>
     </figure>
 
-    <figure style="text-align: center;">
+
+    <figure style="text-align: center;" id="22">
+        <img 
+            src="./resources/imgs/press_002.jpg" 
+            alt="The smooth, controlled Z axis action is utalised to press in the heated brass inserts."
+            width="480px" 
+            height="240px" 
+            style="position: relative; left: 0%;"
+        >
+        <figcaption>Heated insert smooth consistent action.</figcaption>
+    </figure>
+
+    <figure style="text-align: center;" id="23">
         <img 
             src="./resources/imgs/raised_text.png" 
             width="240px" 
@@ -435,31 +543,30 @@ figcaption {font-weight: bold;}
     This design principle can be used to create extremely compact, 
     highly resiliant components that can achive a very high precision range of movement,
     like a <a href="https://www.youtube.com/watch?v=C7sPRYPM_yQ" target="_blank"> printed microscope control stage</a>. 
-    It was discovered that gothic filigree can be designed in such a way 
-    to provide compliant-like behavior while also being very beautiful and adding strength and rigidity to the structure. 
-    This discovery aligns very well with my attempt to ensure as many components as possible
+    It was discovered that popular gothic filigree patterns can be tweaked to provide compliant-like behavior while also being very beautiful 
+    and adding strength and rigidity to the structure. This discovery aligns very well with my attempt to ensure as many components as possible
     serve both form and function. However this discovery won't be relevant for this project, just something to bear in mind for future design work. 
 </p>
 <div style="display: flex; justify-content: center; gap: 10px;">
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="24">
         <img 
             src="./resources/imgs/compliant_mechanism.png" 
-            width="120px" 
-            height="120px" 
-            style="position: relative; left: 25%;"
+            width="240px" 
+            height="240px" 
+            style="position: relative; left: 0%;"
         >
         <figcaption>Conventional compliant mechanism, <br> a radial spring in this case.</figcaption>
     </figure>
 
-    <figure style="text-align: center;">
+    <figure style="text-align: center;" id="25">
         <img 
-            src="./resources/imgs/compliant_radial_filigree.png" 
-            width="120px" 
-            height="120px" 
-            style="position: relative; left: 25%;"
+            src="./resources/imgs/Quatrefoil_Moulette_Window.jpeg" 
+            width="240px" 
+            height="240px" 
+            style="position: relative; left: 0%;"
         >
-        <figcaption>Tracery designed to create<br> compliance in the radial axis.</figcaption>
+        <figcaption>Quatrefoil Moulette pattern with<br> compliance in the radial axis.</figcaption>
     </figure>
     
 </div>
@@ -468,17 +575,95 @@ figcaption {font-weight: bold;}
 
 </section>
 <section id="assembly" class="section" aria-labelledby="assembly-heading">
-<h2 id="assembly-heading text_">Assembly</h2>
+<h2 id="assembly-heading text_">Manufacturing &amp; Assembly</h2>
 <p id="text_">Content coming soon.</p>
 </section>
 <section id="cooling" class="section" aria-labelledby="cooling-heading">
 <h2 id="cooling-heading text_">Cooling, Thermals &amp; EMI</h2>
 <p id="text_">Content coming soon.</p>
 </section>
+
 <section id="painting" class="section" aria-labelledby="painting-heading">
-<h2 id="painting-heading text_">Painting &amp; Finish</h2>
-<p id="text_">Content coming soon.</p>
+<h2 id="painting-heading text_">Materials Finish</h2>
+<p id="text_">Paint, Marble, Glass, Electro-Metal &amp; Spotlight Finishes coming soon.</p>
 </section>
+
+<section id="network" class="section" aria-labelledby="network-heading">
+    <h2 id="network-heading text_">Optronic LAN</h2>
+    <p id="text_">Content coming soon.</p>
+</section>
+
+<section id="video" class="section" aria-labelledby="video-heading">
+    <h2 id="video-heading text_">Video</h2>
+    <p id="text_">Content coming soon.</p>
+</section>
+
 </main>
+<div id="image-modal" aria-hidden="true" role="dialog" aria-label="Image preview" style="position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.9); z-index: 1000;">
+    <button type="button" id="image-modal-close" aria-label="Close" style="position:absolute; top: 12px; right: 12px; background: rgba(17,17,17,0.7); color: #fff; border: 1px solid #444; border-radius: 6px; padding: 6px 10px; cursor: pointer; z-index: 2;">Close ✕</button>
+    <img id="image-modal-img" alt="Expanded preview" style="max-width: 90vw; max-height: 80vh; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.6); position: relative; z-index: 1;">
+    <div id="image-modal-title" style="position:absolute; bottom: 24px; left: 24px; right: 24px; color: #f8fafc; font-size: 16px; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index: 1;"></div>
+    <!-- clicking the backdrop closes the modal -->
+    <div id="image-modal-backdrop-capture" style="position:absolute; inset:0; z-index: 0;"></div>
+</div>
+<script>
+// Attach click handlers to all figure images and show them in a modal
+(function () {
+    var modal = document.getElementById('image-modal');
+    var modalImg = document.getElementById('image-modal-img');
+    var closeBtn = document.getElementById('image-modal-close');
+    var backdrop = document.getElementById('image-modal-backdrop-capture');
+    var titleEl = document.getElementById('image-modal-title');
+
+    if (!modal || !modalImg) return;
+
+    function openModal(src, alt, title) {
+        modalImg.src = src;
+        modalImg.alt = alt || 'Expanded preview';
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (titleEl) { titleEl.textContent = title || ''; }
+        closeBtn.focus();
+    }
+
+    function closeModal() {
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        modalImg.src = '';
+        modalImg.alt = 'Expanded preview';
+        if (titleEl) { titleEl.textContent = ''; }
+    }
+
+    // Click to open
+    var imgs = document.querySelectorAll('figure img');
+    imgs.forEach(function (img) {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function () {
+            var figure = img.closest('figure');
+            var caption = '';
+            if (figure) {
+                var capEl = figure.querySelector('figcaption');
+                if (capEl) { caption = (capEl.textContent || '').trim(); }
+            }
+            var fullSrc = img.getAttribute('data-fullsrc') || img.getAttribute('src');
+            var alt = img.getAttribute('alt') || caption || 'Image';
+            // Use alt attribute as title, fallback to figcaption
+            var title = img.getAttribute('alt') || caption || 'Image';
+            openModal(fullSrc, alt, title);
+        });
+    });
+
+    // Close interactions
+    closeBtn.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.style.display !== 'none') {
+            closeModal();
+        }
+    });
+})();
+</script>
 </body>
 </html>
