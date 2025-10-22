@@ -176,30 +176,92 @@ figcaption {
 
     
 </style>
+<style>
+.language-bar {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+    padding: 1px;
+    margin-top: 8px;
+    border-top: 1px solid #1e293b;
+    z-index: 25;
+}
+
+.language-img-container {
+    width: 30px; /* Slightly larger than 25px * 1.2 */
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.language-img {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    opacity: 0.7;
+    transform: scale(1);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.language-img:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 1000;
+}
+
+.language-img.activeLanguage {
+    opacity: 1;
+    transform: scale(1.2); /* Match hover scale */
+    z-index: 1000; /* Match hover z-index */
+}
+</style>
 </head>
 <body>
 <header class="header">
-    <h1 id="text_">Grimdark PC Build</h1>
+    <h1 id="text_1">Grimdark PC Build</h1>
 </header>
 <div class="background-strip"></div>
 <div class="side-slice-container" id="side-slice-container"></div>
 <nav class="sidebar" aria-label="Quick select menu">
-<h2 id="text_">Quick Select</h2>
-<a href="#inspiration" id="text_">Inspiration</a>
-<a href="#parts" id="text_">Parts List</a>
-<a href="#prep-work" id="text_">Prep Work</a> 
-<a href="#rough-design" id="text_">Rough Technical Design</a>
-<a href="#CAD-testing" id="text_">CAD and Testing</a> 
-<a href="#assembly" id="text_">Manufacturing & Assembly</a>
-<a href="#cooling" id="text_">Cooling, Thermals &amp; EMI</a>
-<a href="#painting" id="text_">Materials Finish</a>
-<a href="#network" id="text_">Optronic LAN</a>
-<a href="#video" id="text_">Video</a>
+<h2 id="text_2">Quick Select</h2>
+<a href="#inspiration" id="text_3">Inspiration</a>
+<a href="#parts" id="text_4">Parts List</a>
+<a href="#prep-work" id="text_5">Prep Work</a> 
+<a href="#rough-design" id="text_6">Rough Technical Design</a>
+<a href="#CAD-testing" id="text_7">CAD and Testing</a> 
+<a href="#assembly" id="text_8">Manufacturing & Assembly</a>
+<a href="#cooling" id="text_9">Cooling, Thermals &amp; EMI</a>
+<a href="#painting" id="text_10">Materials Finish</a>
+<a href="#network" id="text_11">Optronic LAN</a>
+<a href="#video" id="text_12">Video</a>
+<div class="language-bar" role="group" aria-label="Language selector">
+    <div class="language-img-container">
+        <img src="./resources/nationIcons/DE.png" alt="German (DE)" class="language-img" title="German (DE)">
+    </div>
+    <div class="language-img-container">
+        <img src="./resources/nationIcons/GE.png" alt="Georgian (GE)" class="language-img" title="Georgian (GE)">
+    </div>
+    <div class="language-img-container">
+        <img src="./resources/nationIcons/JP.png" alt="Japanese (JP)" class="language-img" title="Japanese (JP)">
+    </div>
+    <div class="language-img-container">
+        <img src="./resources/nationIcons/PT.png" alt="Portuguese (PT)" class="language-img" title="Portuguese (PT)">
+    </div>
+        <div class="language-img-container">
+        <img src="./resources/nationIcons/RU.png" alt="Russian (RU)" class="language-img" title="Russian (RU)">
+    </div>
+     <div class="language-img-container">
+         <img src="./resources/nationIcons/UK.png" alt="English (UK)" class="language-img activeLanguage" title="English (UK)">
+     </div>
+</div>
 </nav>
 <main class="main" id="top">
 <section id="inspiration" class="section" aria-labelledby="intro-heading">
 <h2 id="intro-heading text_">Inspiration</h2>
-<p id="text_">   
+<p id="text_13">   
     Warhammer 40,000 was once very inspiring to a small but very creative and fiercely loyal fan base across Western Civilisation.
     When Games Workshop first conceived this sci-fi genre ~30 years ago, it was a rich blend of themes like
     Medieval, central European, pseudo Christian, sci-fi, bio-cybernetic, feudal, nationalist, Gothic and gritty. 
@@ -213,7 +275,7 @@ figcaption {
     of Man. Now Games Wokeshop have fully fallen into the embrace of the antagonist and embody the Gods of Chaos: lawless, perverse, debased 
     and violently self-destructive. 
 </p>
-<p id="text_">
+<p id="text_14">
     I fully reject all that anti-Christian degeneracy with extreme prejudice. I especially reject the perfidious Games Wokeshop 
     and the tasteless grey sludge they've been slopping out over the past decade +.  
     I return to the rich roots of this beautiful and complex sci-fi genre because it's story distantly resembles my own: 
@@ -238,7 +300,7 @@ figcaption {
     </figure>    
 </div>
 
-<p id="text_">
+<p id="text_15">
     During my initial exploration of this theme, I wanted to get a quick feel for the style I was aiming for. 
     When I sketch a building or ornament, the process gives me a more tangable grasp of the design as I study and pencil down the geometry. 
     So I drew various structures in the pseudo-gothic style, inspired by architecture and ornaments from across the City of Edinburgh. 
@@ -297,7 +359,7 @@ figcaption {
     </figure>
     
 </div>
-<p id="text_">
+<p id="text_16">
     The defining engineering feature of the Gothic style is its reliance on compressive forces, which were used to build the majestic cathedrals
     of Medieval Europe. 
     These structures followed distinctly different design principles from the castles of the time. 
@@ -317,7 +379,7 @@ figcaption {
     </figure>
     
 </div>
-<p id="text_">
+<p id="text_17">
     The Opus Francigenum style, or 'French Work' (Gothic) emerged as a dominant form of architecture in the
     12th starting in Frankish lands (modern France, Germany and Spain) then rapidly spread across Christendom by highly sought after artisans: 
     master builders, ironworkers, stonemasons, carpenters, glassmakers, renderers and a veritable army of support workers. 
@@ -338,7 +400,7 @@ figcaption {
     </figure>
     
 </div>
-<p id="text_">
+<p id="text_18">
     This style introduced iconic geometric elements such as the lancet arch, vaulted ceilings, reinforced buttresses, 
     soaring spires, and heavy pinnacle stones. 
     Although these features are beautiful they're not ornamental—they are physical manifestations of the underlying 
@@ -393,7 +455,7 @@ figcaption {
     </figure>
     
 </div>
-<p id="text_">
+<p id="text_19">
     While Gothic architecture relies heavily on compression, objects that 'hang'—like chandeliers, candleholders, 
     incense censer, etc —depend on tension, the exact opposite of compression. 
     This contrast in forces reveals my dilemma in designing a "hanging Gothic PC case".
@@ -417,7 +479,7 @@ figcaption {
     </figure>
     
 </div>
-<p id="text_">
+<p id="text_20">
     Hanging chains were used by master designers, engineers and architects as an early form of 
     <a href="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.freepik.com%2Fpremium-photo%2Fdetailed-analysis-bridge-structure-using-finite-element-analysis-fea-mesh-stress-distribution_1105246-1054.jpg&f=1&nofb=1&ipt=10022ae60024700c6f85b38bbebfb960661410483d562d02507cfe85d8116483" target="_blank">
     finite element analysis</a> simulation. 
@@ -439,7 +501,7 @@ figcaption {
     
 </div>
 
-<p id="text_">
+<p id="text_21">
     My solution to work around this apparent design contradiction is to create 1 foundation type structure 
     which is suspended by strong chains from the ceiling. From this foundation every other component 
     is placed on top and so under the conventional compressive forces found in gothic design. 
@@ -461,7 +523,7 @@ figcaption {
     </figure>
     
 </div>
-<p id="text_">
+<p id="text_22">
     This attention to synergetic detail is not only applied to the main, most visible, 
     external components but is also applied to internal components. 
     Connective braces, brackets and clasps likewise serve well in both form and function. 
@@ -507,8 +569,8 @@ figcaption {
 </ul>
 </section>
 <section id="parts" class="section" aria-labelledby="parts-heading">
-<h2 id="parts-heading" id="text_">Parts List</h2>
-<p id="text_">
+<h2 id="parts-heading" id="text_23">Parts List</h2>
+<p id="text_24">
     With lots of assistance from my brother, the electronic PC components were selected, analysed, re-analysed, 
     debated and purchased. The goal was to create a system with low initial specifications but decent upgrade potential. 
     My next project will be a game engine oriented around AI training. The minimum requirements for that project are a CPU with  +4 cores and a 
@@ -526,7 +588,7 @@ figcaption {
     <li>RAM: Basic 2nd hand 8GB DDR4 card</a></li>
     <li>Storage: Basic 2nd hand 128gb SSD drive</li>
     <li>Power Supply: <a href="https://box.co.uk/cooler-master-mwe-750v3-atx-3-1-mpe-7501-acabw-3buk?source=aw&sv1=affiliate&sv_campaign_id=127079&awc=100685_1756983218_e4bffc3d86ea23c5cdcfce40e3cd1a1a" target="_blank" rel="noopener noreferrer">Brand New Cooler Master Bronze PSU 750w 4PCIe connections</a></li>
-    <li id="text_">
+    <li id="text_25">
         Cooling: Custom purified air system with 4 x 120mm fans arranged in a parallel box configuration, 
         true HEPA cylindrical particulate filter and activated charcoal screen. 
         Custom ducting, mounting and airtight sealing across the whole case 
@@ -536,8 +598,8 @@ figcaption {
 </ul>
 </section>
 <section id="prep-work" class="section" aria-labelledby="prep-work-heading">
-<h2 id="prep-work-heading text_">Prep Work</h2>
-<p id="text_">
+<h2 id="prep-work-heading text_26">Prep Work</h2>
+<p id="text_27">
     Many of the structural/skeletal/connective components are from non-computing fields, 
     like a 2 ton automotive tow chain, malleable iron pipework, garden awning cables and connections etc. 
     The heavy metal components and some of the 2nd hand components needed cleaning and even some needed
@@ -548,7 +610,7 @@ figcaption {
     The cleaning process was laborious but the steps were repeated many times (~3-7) 
     until no further dirt was observed on a clean, white alcohol wipe.
 </p>
-<p id="text_">
+<p id="text_28">
     The workspace has a severe dust problem, so all extra fabric was removed from the 
     room and the carpet floor and horizontal surfaces were wet cleaned multiple times across the duration of the project. 
     This is far from a clean room setup but is the highest cleanliness possible with the resources available. 
@@ -560,9 +622,9 @@ figcaption {
 </p>
 </section>
 <section id="rough-design" class="section" aria-labelledby="rough-design-heading">
-<h2 id="rough-design-heading text_">Rough Technical Design</h2>
-<h3 id="layout text_">Layout</h3>
-<p id="text_">
+<h2 id="rough-design-heading text_29">Rough Technical Design</h2>
+<h3 id="layout text_30">Layout</h3>
+<p id="text_31">
     As previously mentioned, because the project is so complex, the components are placed in categories inspired by anatomy. 
     Bones, Cartilage, Ligaments, Tendons etc. The underlying iron pipe structure is the toughest component and 
     is catagorised under "Venatus Ossificatrix", or "Venerable Matrix of Bones" in low gothic. 
@@ -571,8 +633,8 @@ figcaption {
     but without getting too distracted by the fun, creative process of coming up with new concepts and categories, 
     just drawing on God's creation for inspiration instead.
 </p>
-<h3 id="sketches text_">Sketches</h3>
-<p id="text_">
+<h3 id="sketches text_32">Sketches</h3>
+<p id="text_33">
     To check the viability of a few ideas quickly, rough technical sketches were drawn. 
     They are 1:8 scale with moderate attention to accuracy, 
     to produce drawings that quite closely represent a full scale design and build phases. 
@@ -620,9 +682,9 @@ figcaption {
 </div>
 </section>
 <section id="CAD-testing" class="section" aria-labelledby="CAD-testing">
-<h2 id="CAD-testing-heading text_">Testing and CAD</h2>
-<h3 id="testing text_">Mass Testing</h3>
-<p id="text_"> 
+<h2 id="CAD-testing-heading text_34">Testing and CAD</h2>
+<h3 id="testing text_35">Mass Testing</h3>
+<p id="text_36"> 
     Because the completed PC and case was projected to weigh +10kg (later discovered to be 18.25kg), testing the key structural components was required. 
     If anyone key structural component were to fail, it would be an expensive accident with little chance of recovery. 
     The mass of each of the main components was found and key components were tested at ~300% their nominal load or to breaking, 
@@ -630,18 +692,18 @@ figcaption {
     mounted very securely. Once the stress testing was complete the structural integrity of the device drew no further attention and 
     energies could fully move on to other matters without fear.
 </p>
-<p id="text_">The mass of the main components were found to be:</p>
+<p id="text_37">The mass of the main components were found to be:</p>
     <ul>
-       <li id="text_">2.15kg: Medullum (fragile internal components like Motherboard, GPU, RAM, Memory etc)</li> 
-       <li id="text_">1.7kg: Power Supply Unit</li>
-       <li id="text_">5.2kg: Venatus Ossifactrix (Skeletal pipework and 3D printed cartilage)</li>
-       <li id="text_">6.4kg: Chain tendons and ligaments</li>
-       <li id="text_">0.7kg: The Alveolus Machina (air filters and primary inlet fan system)</li>
-       <li id="text_">0.0kg: Cranium (tough external elements)</li>
-       <li id="text_">2.1kg: Cabling</li>
-       <li id="text_">18.25kg: Total</li>
+       <li id="text_38">2.15kg: Medullum (fragile internal components like Motherboard, GPU, RAM, Memory etc)</li> 
+       <li id="text_39">1.7kg: Power Supply Unit</li>
+       <li id="text_40">5.2kg: Venatus Ossifactrix (Skeletal pipework and 3D printed cartilage)</li>
+       <li id="text_41">6.4kg: Chain tendons and ligaments</li>
+       <li id="text_42">0.7kg: The Alveolus Machina (air filters and primary inlet fan system)</li>
+       <li id="text_43">0.0kg: Cranium (tough external elements)</li>
+       <li id="text_44">2.1kg: Cabling</li>
+       <li id="text_45">18.25kg: Total</li>
     </ul>
-<p id="text_">
+<p id="text_54">
     The key structural components were tested at 300% of their nominal load. 
     Exercise weights were used as a dummy test mass. 
     Before testing, the components were inspected to observe their pre-test condition.
@@ -650,26 +712,26 @@ figcaption {
     The key components and the load tested were (ordered by max mass first to represent the orientation of tensile forces):
 </p>
     <ul>
-        <li id="text_">60.0kg: Wooden Ceiling Joists</li> 
-        <li id="text_">60.0kg: Mounting bolts (4 bolts, 15.0kg each)</li> 
-        <li id="text_">30.0kg: Mounting brackets (only 150% of standard load because there was not enough test mass available) </li>
-        <li id="text_">33.9kg: Chain tendons and ligaments (4 chains, 8.5kg each)</li>
-        <li id="text_">0.0kg: Skeletal pipework</li>
-        <li id="text_">0.0kg: 3D printed PLA cartilage</li>
+        <li id="text_46">60.0kg: Wooden Ceiling Joists</li> 
+        <li id="text_47">60.0kg: Mounting bolts (4 bolts, 15.0kg each)</li> 
+        <li id="text_48">30.0kg: Mounting brackets (only 150% of standard load because there was not enough test mass available) </li>
+        <li id="text_49">33.9kg: Chain tendons and ligaments (4 chains, 8.5kg each)</li>
+        <li id="text_50">0.0kg: Skeletal pipework</li>
+        <li id="text_51">0.0kg: 3D printed PLA cartilage</li>
     </ul>
 
-<p id="text_">
+<p id="text_52">
     All the key components passed stress testing without any signs of deformation. 
     This was taken as an indication the components will comfortably stand up under 200% less mass 
     representing the strain the PC case will actually experience under normal conditions.
 </p>
-<h3 id="layout text_">CAD</h3>
-<p id="text_">
+<h3 id="layout text_53">CAD</h3>
+<p id="text_55">
     FreeCAD was used to design the 3D printed components. These included brackets, braces and mounting points. 
     The structural components were tested at 300% expected load to ensure they would properly support the PC components 
     under normal working load.
 </p>
-<p id="text_">
+<p id="text_56">
 
     While prototyping 3D printed components it was discovered that inserting heated brass inserts by hand was creating many alignment issues. 
     So over about 1 day and 3 prototypes, a mount was created to clasp the heated brass insert tool in my drill press. 
@@ -715,7 +777,7 @@ figcaption {
     
 </div>
 <h4 id_text_">Happy Accident</h4>
-<p id="text_">
+<p id="text_57">
     It was discovered that gothic tracery can double as a compliant mechanism if designed correctly. 
     A compliant mechanism is a device that allows for some elasticity under load without breaking. 
     This design principle can be used to create extremely compact, 
@@ -753,27 +815,27 @@ figcaption {
 
 </section>
 <section id="assembly" class="section" aria-labelledby="assembly-heading">
-<h2 id="assembly-heading text_">Manufacturing &amp; Assembly</h2>
-<p id="text_">Content coming soon.</p>
+<h2 id="assembly-heading text_58">Manufacturing &amp; Assembly</h2>
+<p id="text_59">Content coming soon.</p>
 </section>
 <section id="cooling" class="section" aria-labelledby="cooling-heading">
-<h2 id="cooling-heading text_">Cooling, Thermals &amp; EMI</h2>
-<p id="text_">Content coming soon.</p>
+<h2 id="cooling-heading text_60">Cooling, Thermals &amp; EMI</h2>
+<p id="text_61">Content coming soon.</p>
 </section>
 
 <section id="painting" class="section" aria-labelledby="painting-heading">
-<h2 id="painting-heading text_">Materials Finish</h2>
-<p id="text_">Paint, Marble, Glass, Electro-Metal &amp; Spotlight Finishes coming soon.</p>
+<h2 id="painting-heading text_62">Materials Finish</h2>
+<p id="text_63">Paint, Marble, Glass, Electro-Metal &amp; Spotlight Finishes coming soon.</p>
 </section>
 
 <section id="network" class="section" aria-labelledby="network-heading">
-    <h2 id="network-heading text_">Optronic LAN</h2>
-    <p id="text_">Content coming soon.</p>
+    <h2 id="network-heading text_64">Optronic LAN</h2>
+    <p id="text_65">Content coming soon.</p>
 </section>
 
 <section id="video" class="section" aria-labelledby="video-heading">
-    <h2 id="video-heading text_">Video</h2>
-    <p id="text_">Content coming soon.</p>
+    <h2 id="video-heading text_66">Video</h2>
+    <p id="text_67">Content coming soon.</p>
 </section>
 
 <img id="bottom-right-corner" alt="Bottom right corner decoration" 
@@ -845,6 +907,23 @@ src="./resources/imgs/BG_inspiration/4_bottom_right_corner.png" >
         }
     });
 })();
+
+    // Language selector functionality
+    (function() {
+        const languageImages = document.querySelectorAll('.language-img');
+        
+        languageImages.forEach(function(img) {
+            img.addEventListener('click', function() {
+                // Remove activeLanguage class from all images
+                languageImages.forEach(function(otherImg) {
+                    otherImg.classList.remove('activeLanguage');
+                });
+                
+                // Add activeLanguage class to clicked image
+                this.classList.add('activeLanguage');
+            });
+        });
+    })();
 
     // Dynamically set background strip height and create repeating side slice images
     window.addEventListener('load', () => {
