@@ -913,6 +913,75 @@ src="./resources/imgs/BG_inspiration/4_bottom_right_corner.png" >
     (function() {
         const languageImages = document.querySelectorAll('.language-img');
         
+        // Language mapping - maps flag images to language files
+        const languageMap = {
+            'DE.png': 'German.json',
+            'GE.png': 'Georgian.json', 
+            'JP.png': 'Japanese.json',
+            'PT.png': 'Portuguese.json',
+            'RU.png': 'Russian.json',
+            'UK.png': 'English.json'
+        };
+        
+        // Cache for loaded language files
+        const languageCache = {};
+        
+        // Function to load language file
+        async function loadLanguageFile(languageFile) {
+            if (languageCache[languageFile]) {
+                return languageCache[languageFile];
+            }
+            
+            try {
+                const response = await fetch(`./resources/languageFiles/${languageFile}`);
+                if (!response.ok) {
+                    throw new Error(`Failed to load ${languageFile}: ${response.status}`);
+                }
+                const translations = await response.json();
+                languageCache[languageFile] = translations;
+                return translations;
+            } catch (error) {
+                console.error(`Error loading language file ${languageFile}:`, error);
+                return null;
+            }
+        }
+        
+        // Function to apply translations to the page
+        function applyTranslations(translations) {
+            if (!translations) return;
+            
+            // Apply translations to all elements with text_ IDs
+            Object.keys(translations).forEach(function(key) {
+                const element = document.getElementById(key);
+                if (element && translations[key]) {
+                    element.textContent = translations[key];
+                }
+            });
+        }
+        
+        // Function to handle language switching
+        async function switchLanguage(flagSrc) {
+            const flagName = flagSrc.split('/').pop(); // Extract filename from path
+            const languageFile = languageMap[flagName];
+            
+            if (!languageFile) {
+                console.error(`No language file mapped for flag: ${flagName}`);
+                return;
+            }
+            
+            // Show loading state (optional)
+            console.log(`Switching to ${languageFile}...`);
+            
+            // Load and apply translations
+            const translations = await loadLanguageFile(languageFile);
+            if (translations) {
+                applyTranslations(translations);
+                console.log(`Successfully switched to ${languageFile}`);
+            } else {
+                console.error(`Failed to load translations for ${languageFile}`);
+            }
+        }
+        
         languageImages.forEach(function(img) {
             img.addEventListener('click', function() {
                 // Remove activeLanguage class from all images
@@ -922,6 +991,10 @@ src="./resources/imgs/BG_inspiration/4_bottom_right_corner.png" >
                 
                 // Add activeLanguage class to clicked image
                 this.classList.add('activeLanguage');
+                
+                // Switch language
+                const flagSrc = this.src;
+                switchLanguage(flagSrc);
             });
         });
     })();
